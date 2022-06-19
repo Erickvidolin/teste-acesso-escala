@@ -89,6 +89,9 @@ img {
 }
 
 .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   border-width: 0 0.4rem 0.5rem 0;
   border-radius: 1.5rem;
@@ -96,9 +99,9 @@ img {
   background-clip: padding-box;
   background-color: var(--buttonf-color);
   width: 90%;
-  height: 15rem;
+  height: 12.3rem;
   font-family: 'Bebas Neue', cursive;
-  font-size: 2rem;
+  font-size: 4rem;
 }
 
 .box:hover {
