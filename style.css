@@ -1,0 +1,374 @@
+:root {
+  --primary-color: #03343a;
+  --titlle-color: #3f4444;
+  --text-color: #130b1b;
+  --button-color: #221a27;
+  --buttonf-color: #fd7c12;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+#nav-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+
+  background-color: var(--primary-color);
+
+  width: 100%;
+  height: 50px;
+
+  margin-bottom: -1;
+}
+
+#nav-menu {
+  display: flex;
+  column-gap: 2rem;
+  text-decoration: none;
+  margin-right: 2rem;
+}
+
+#cabecalho {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--primary-color);
+
+  width: 100%;
+  height: 250px;
+
+  border-bottom-left-radius: 10.5rem;
+  border-bottom-right-radius: 10.5rem;
+}
+
+.imagen {
+  margin-bottom: 9rem;
+  border-radius: 50%;
+  border: 4px solid var(--primary-color);
+  width: 12rem;
+  position: relative;
+  z-index: 3;
+  margin-top: 4rem;
+}
+
+#box {
+  display: flex;
+  justify-content: center;
+
+  position: relative;
+
+  margin-top: -160px;
+}
+
+#titulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #414747;
+  margin-left: 5%;
+  margin-bottom: 9.9rem;
+  margin-top: -8rem;
+  width: 90%;
+  height: 20%;
+
+  position: relative;
+}
+
+#title {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  font-size: 2rem;
+
+  position: relative;
+}
+
+#button-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  background-color: var(--titlle-color);
+  width: 90%;
+  height: 100%;
+}
+
+#button {
+  border-radius: 1.5rem;
+  width: 95%;
+  height: 100px;
+  margin-top: 0.01rem;
+  margin-bottom: 0.5rem;
+  background-color: var(--buttonf-color);
+  font-size: 2rem;
+  margin-right: 1rem;
+  margin-left: 2.5%;
+  cursor: pointer;
+}
+
+.modal-container {
+  background: rgba(0, 0, 0, 0.2);
+
+  width: 100%;
+  height: 100vh;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  display: grid;
+
+  place-items: center;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: 0.3s;
+
+  z-index: 100;
+}
+
+.modal {
+  background: white;
+
+  width: 1%;
+  height: 90%;
+
+  padding: 15px;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px 0 #00000050;
+
+  overflow: hidden;
+
+  transition: width 0.5s, heigth 1s;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.modal-show > .modal {
+  width: 80%;
+  height: 90%;
+}
+
+.modal-show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#weeks-box {
+  background-color: #3512fd;
+  width: 100%;
+  height: 18.8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  place-items: center;
+  border-radius: 1rem;
+}
+
+#week{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.semana{
+  margin-top: -0.6rem;
+  font-size:0.7rem;
+  margin-bottom: -1.5rem;
+}
+
+.semanad {
+  margin-bottom: -0.5rem;
+  font-size: 0.9rem;
+}
+
+.days {
+  font-size: 0.8em;
+}
+
+.days p {
+  margin-bottom: -0.5rem;
+  font-size: 0.7rem;
+}
+
+.days h4 {
+  font-size: 1rem;
+  margin-bottom: -0.5rem;
+}
+
+@media (max-width: 484px) {
+  .escala {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 320px) {
+  .escala {
+    font-size: 1rem;
+  }
+  #weeks-box {
+    background-color: #3512fd;
+    width: 100%;
+    height: 7.1rem;
+    justify-content: center;
+    text-align: center;
+    place-items: center;
+    border-radius: 1rem;
+  }
+
+  .days {
+    font-size: 0.8em;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+  }
+
+  .days p {
+    margin-bottom: -0.5rem;
+    font-size: 1rem;
+  }
+
+  .days h4 {
+    font-size: 1.5rem;
+    margin-bottom: -0.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .escala {
+    font-size: 1.9rem;
+  }
+}
+
+@media (min-width: 767px) {
+  #button-box {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+
+  .modal {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #weeks-box {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    background-color: #3512fd;
+    width: 20%;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+    place-items: center;
+    border-radius: 1rem;
+  }
+
+  #week{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .semanad {
+    font-size: 1.7em;
+    margin-top: 0.5rem;
+  }
+
+  .days {
+    font-size: 0.3em;
+    margin-bottom: 0.1rem;
+    margin-top: -0.5rem;
+
+  }
+
+  .days p {
+    margin-bottom: -0.5rem;
+    font-size: 1.2rem;
+  }
+
+  .days h4 {
+    font-size: 1.2rem;
+    margin-bottom: -0.5rem;
+  }
+}
+
+@media (min-width: 1023px) {
+  #button-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  #button {
+    height: 4.5rem;
+  }
+
+  .modal {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #weeks-box {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    background-color: #3512fd;
+    width: 20%;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+    place-items: center;
+    border-radius: 1rem;
+  }
+
+  #week {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .semana{
+    font-size: 1.5rem;
+  }
+
+  .semanad {
+    font-size: 1.5em;
+    margin-top: 0.5rem;
+    margin-bottom: -1rem;
+  }
+
+  .days {
+    font-size: 0.8em;
+    margin-bottom: 1rem;
+    margin-top: -1rem;
+  }
+
+  .days p {
+    margin-bottom: -0.5rem;
+    font-size: 1.2rem;
+  }
+
+  .days h4 {
+    font-size: 1.5rem;
+    margin-bottom: -0.5rem;
+  }
+}
+
+@media (min-width: 1500px) {
+  #button-box {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+  }
+
+  #button {
+    height: 4.5rem;
+  }
+}
