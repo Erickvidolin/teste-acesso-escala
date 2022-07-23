@@ -21,3 +21,4 @@ function closeModal(mn){
   modal.style.display = 'none';
 
 }
+
