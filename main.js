@@ -1,15 +1,23 @@
-const getElement = (...queries) => document.querySelector (...queries);
+function openModal(mn) {
 
-const button = getElement('.open-modal-button');
-const container = getElement('.modal-container');
-const modal = getElement('.modal');
+  var modal = document.getElementById(mn);
 
+  
 
-const activeModalClass = 'modal-show';
+  if (typeof modal == 'undefined' || modal === null)
+  return;
 
-const openModal = () => container.classList.add(activeModalClass)
-const closeModal = () => container.classList.remove(activeModalClass);;
-button.addEventListener('click', openModal);
-container.addEventListener('click',(event) =>{ 
-  if (modal.contains(event.target)) return; 
-  closeModal(); });
+  modal.style.display = 'block';
+
+}
+
+function closeModal(mn){
+
+  let modal = document.getElementById(mn);
+
+  if (typeof modal == 'undefined' || modal === null)
+  return;
+
+  modal.style.display = 'none';
+
+}
